@@ -2,23 +2,18 @@
   "wishes": [
     {
       "id": 1,
-      "name": "Sophie",
+      "name": "Achraf",
       "message": "Joyeux anniversaire Mariem! Je te souhaite une journée remplie de bonheur et d'amour. Tu es une personne incroyable! ❤️"
     },
     {
       "id": 2,
-      "name": "Thomas",
+      "name": "Abdelwahid",
       "message": "Bon anniversaire! Que cette journée soit aussi spéciale que toi. Profite bien! 🎉"
     },
     {
       "id": 3,
-      "name": "Léa",
+      "name": "rajaa",
       "message": "Joyeux anniversaire ma belle! Je te souhaite tout le bonheur du monde. Tu le mérites! 🎂"
-    },
-    {
-      "id": 1748189727159,
-      "name": "Abdelwahid",
-      "message": "happy birthday"
     }
   ]
 }
