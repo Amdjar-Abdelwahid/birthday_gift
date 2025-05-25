@@ -12,7 +12,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ playing, onToggle }) => {
   useEffect(() => {
     // Create audio element
     if (!audioRef.current) {
-      audioRef.current = new Audio('https://www.chosic.com/wp-content/uploads/2021/04/Happy-Birthday-To-You-Patsy-Biscoe.mp3');
+      audioRef.current = new Audio('/src/components/music/music.mp3');
       audioRef.current.loop = true;
       audioRef.current.volume = 0.3;
     }
@@ -39,7 +39,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ playing, onToggle }) => {
     <div className="fixed bottom-6 right-6 z-40">
       <button 
         onClick={onToggle}
-        className="music-control bg-pink-500 text-white p-3 rounded-full shadow-lg"
+        className="music-control bg-pink-500 text-white p-3 rounded-full shadow-lg hover:bg-pink-600 transition-colors"
         aria-label={playing ? "Pause music" : "Play music"}
         title={playing ? "Couper la musique" : "Jouer la musique"}
       >

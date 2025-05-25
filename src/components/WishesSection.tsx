@@ -1,20 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Send } from 'lucide-react';
 
-// Sample initial wishes
-const initialWishes = [
-  { id: 1, name: 'Sophie', message: 'Joyeux anniversaire Mariem! Je te souhaite une journée remplie de bonheur et d\'amour. Tu es une personne incroyable! ❤️' },
-  { id: 2, name: 'Thomas', message: 'Bon anniversaire! Que cette journée soit aussi spéciale que toi. Profite bien! 🎉' },
-  { id: 3, name: 'Léa', message: 'Joyeux anniversaire ma belle! Je te souhaite tout le bonheur du monde. Tu le mérites! 🎂' }
-];
+interface Wish {
+  id: number;
+  name: string;
+  message: string;
+}
+
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
 const WishesSection: React.FC = () => {
-  const [wishes, setWishes] = useState(initialWishes);
+  const [wishes, setWishes] = useState<Wish[]>([]);
   const [newWish, setNewWish] = useState({ name: '', message: '' });
   const [errors, setErrors] = useState({ name: false, message: false });
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Fetch wishes from API
+  useEffect(() => {
+    const fetchWishes = async () => {
+      try {
+        const response = await fetch(`${API_URL}/wishes`);
+        if (!response.ok) throw new Error('Failed to fetch wishes');
+        const data = await response.json();
+        setWishes(data.wishes);
+      } catch (err) {
+        setError('Failed to load wishes. Please try again later.');
+        console.error('Error fetching wishes:', err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchWishes();
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validation
@@ -27,19 +49,44 @@ const WishesSection: React.FC = () => {
     
     if (newErrors.name || newErrors.message) return;
     
-    // Add new wish
-    setWishes([
-      ...wishes,
-      { 
-        id: Date.now(), 
-        name: newWish.name, 
-        message: newWish.message 
-      }
-    ]);
-    
-    // Reset form
-    setNewWish({ name: '', message: '' });
+    try {
+      const response = await fetch(`${API_URL}/wishes`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: newWish.name.trim(),
+          message: newWish.message.trim()
+        }),
+      });
+
+      if (!response.ok) throw new Error('Failed to add wish');
+      
+      const addedWish = await response.json();
+      setWishes(prevWishes => [...prevWishes, addedWish]);
+      setNewWish({ name: '', message: '' });
+    } catch (err) {
+      setError('Failed to add wish. Please try again later.');
+      console.error('Error adding wish:', err);
+    }
   };
+
+  if (isLoading) {
+    return (
+      <section className="py-16" id="wishes">
+        <div className="text-center">Loading wishes...</div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section className="py-16" id="wishes">
+        <div className="text-center text-red-500">{error}</div>
+      </section>
+    );
+  }
 
   return (
     <section className="py-16" id="wishes">
