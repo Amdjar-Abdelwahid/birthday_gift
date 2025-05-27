@@ -33,6 +33,16 @@ const initialWishes = [
     id: 6,
     name: 'Maroua taoufiq',
     message: 'Bite ngole wahde lhja nsitha smhi lya ila chi nhare glte lik chi haja wlah ila ana 5ir hbila madiche 3lya wa5a makntsntche lik walkine chi b3de lm5ate makndwiche mzn rahe kanhtarmke 🤣🥹ou Kanb5ike ♥️'
+  },
+  {
+    id: 7,
+    name: 'Fatimezzahra elfels',
+    message : 'Happy birthday maryoma❤️🫶 We’ve known each other for so many years, We\'ve laughed until we cried, danced like no one was watching, and lived through so many crazy moments—good and bad. But no matter what life threw at us, we always stayed together. That’s what makes our friendship so special.  We’ve been through a lot—ups, downs, heartbreaks, victories, tears, and endless laughter. Yet through it all, we never let go of each other. You’re more than a friend to me; you’re L9lb lkbiir💝 you\'re my Beautiful Sister 💐👑  Even in our wildest and silliest moments, we found peace in each other’s presence. Thank you for always being there, for growing with me, for staying when it got hard, and for making life so much brighter just by being in it.  I wish you a birthday full of joy, love, and everything you truly deserve. May this year bring you closer to your dreams, surround you with peace, and remind you how deeply loved you are—not just today, but always.  I love you endlessly, and I’ll always be here—just like you’ve always been here for me. Happy Birthday, my forever friend Laykhlina dima mjmo3iin 🫶🫶❤️'
+  },
+  {
+    id: 8,
+    name: 'Acharf laksiri',
+    message : 'happy birthday maryam , wish u the best in the upcoming years indeed success and chi 3rs ra wa9fin 3lih '
   }
 ];
 
