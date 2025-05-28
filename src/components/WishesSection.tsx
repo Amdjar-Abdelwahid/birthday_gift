@@ -43,6 +43,11 @@ const initialWishes = [
     id: 8,
     name: 'Acharf laksiri',
     message : 'happy birthday maryam , wish u the best in the upcoming years indeed success and chi 3rs ra wa9fin 3lih '
+  },
+  {
+    id: 9,
+    name: 'Rajaa',
+    message : 'I’m so lucky to have someone like you in my life. Your kindness, strength, and constant support mean the world to me. On your special day, I wish you endless joy, love, and all the success your heart desires. May this year bring you beautiful surprises and unforgettable moments.Keep shining bright, just like you always do. 🌟Love you always, and cheers to many more birthdays together! 🎂🎈 '
   }
 ];
 
