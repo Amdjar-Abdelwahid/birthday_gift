@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Gallery from './components/Gallery';
+import VideoGallery from './components/VideoGallery';
 import WishesSection from './components/WishesSection';
 import SurpriseButton from './components/SurpriseButton';
 import Footer from './components/Footer';
@@ -38,7 +39,7 @@ const App: React.FC = () => {
       
       <main className="container mx-auto px-4 py-8">
         <Gallery />
-        
+        <VideoGallery />
         <WishesSection />
         
         <div className="my-16 text-center">
