@@ -15,48 +15,103 @@ import img7 from './photos/img7.jpg';
 import img8 from './photos/img8.jpg';
 import img9 from './photos/img9.jpg';
 import img10 from './photos/img10.jpg';
+import img11 from './photos/img11.jpeg';
+import img12 from './photos/img12.jpeg';
+import img13 from './photos/img13.jpeg';
+import img14 from './photos/img14.jpeg';
+import img15 from './photos/img15.jpeg';
+import img16 from './photos/img16.jpeg';
+import img17 from './photos/img17.jpeg';
+import img18 from './photos/img18.jpeg';
+import img19 from './photos/img19.jpeg';
+import img20 from './photos/img20.jpeg';
+import img21 from './photos/img21.jpeg';
 
 // Local images array
 const galleryImages = [
   {
     url: img1,
-    caption: 'Mémoire 1'
+    caption: 'Notre premier rendez-vous'
   },
   {
-    url: img2,
-    caption: 'Mémoire 2'
+    url: img12,
+    caption: 'Un moment inoubliable ensemble'
   },
   {
-    url: img3,
-    caption: 'Mémoire 3'
+    url: img13,
+    caption: 'Notre voyage préféré'
   },
   {
-    url: img4,
-    caption: 'Mémoire 4'
+    url: img14,
+    caption: 'Une soirée mémorable'
   },
   {
-    url: img5,
-    caption: 'Mémoire 5'
+    url: img15,
+    caption: 'Notre anniversaire de rencontre'
   },
   {
-    url: img6,
-    caption: 'Mémoire 6'
+    url: img16,
+    caption: 'Un déjeuner romantique'
   },
   {
-    url: img7,
-    caption: 'Mémoire 7'
+    url: img17,
+    caption: 'Notre premier voyage'
   },
   {
-    url: img8,
-    caption: 'Mémoire 8'
+    url: img18,
+    caption: 'Une promenade au coucher du soleil'
   },
   {
-    url: img9,
-    caption: 'Mémoire 9'
+    url: img19,
+    caption: 'Notre dîner aux chandelles'
   },
   {
     url: img10,
-    caption: 'Mémoire 10'
+    caption: 'Un moment de complicité'
+  },
+  {
+    url: img11,
+    caption: 'Notre escapade du weekend'
+  },
+  {
+    url: img2,
+    caption: 'Un après-midi en amoureux'
+  },
+  {
+    url: img3,
+    caption: 'Notre balade favorite'
+  },
+  {
+    url: img4,
+    caption: 'Un moment de tendresse'
+  },
+  {
+    url: img5,
+    caption: 'Notre soirée cinéma'
+  },
+  {
+    url: img6,
+    caption: 'Un pique-nique romantique'
+  },
+  {
+    url: img7,
+    caption: 'Notre visite au musée'
+  },
+  {
+    url: img8,
+    caption: 'Un café en terrasse'
+  },
+  {
+    url: img9,
+    caption: 'Notre promenade du dimanche'
+  },
+  {
+    url: img20,
+    caption: 'Un moment de bonheur simple'
+  },
+  {
+    url: img21,
+    caption: 'Notre souvenir préféré'
   }
 ];
 
@@ -94,17 +149,20 @@ const Gallery: React.FC = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
+    fade: true,
+    cssEase: 'linear',
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          arrows: false
+          arrows: false,
+          autoplaySpeed: 3000
         }
       }
     ]

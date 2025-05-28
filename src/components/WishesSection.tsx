@@ -7,7 +7,7 @@ const initialWishes = [
   {
     id: 1,
     name: 'Abdelwahid Amdjar',
-    message: 'Happy birthday Mariem! I hope today brings you as much joy and love as you bring to those around you. You truly deserve all the beautiful things in life. May this year be your most amazing one yet. 💫❤️🎉'
+    message: 'Happy birthday Mariem! I hope today brings you as much joy and love as you bring to those around you. You truly deserve all the beautiful things in life. May this year be your most amazing one yet. 💫❤️🎉 Inta GHadi diri lfloooooooooos hh '
   },
   {
     id: 2,
